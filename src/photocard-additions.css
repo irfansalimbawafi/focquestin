@@ -1,0 +1,118 @@
+/* PHYSICAL PHOTOCARD DESIGN */
+.physical-photocard {
+  position: relative;
+  width: 230px;
+  padding: 8px;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #fff, #f7f2fb);
+  border: 1px solid #e8e0ef;
+  box-shadow: 0 14px 32px rgba(73, 58, 93, 0.16), 0 3px 8px rgba(73, 58, 93, 0.08);
+  overflow: hidden;
+  text-align: left;
+  isolation: isolate;
+}
+
+.physical-photo-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 2.85;
+  border-radius: 11px;
+  overflow: hidden;
+  background: #eee9f3;
+}
+
+.physical-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+}
+
+.rarity-badge {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 9px;
+  min-width: 35px;
+  height: 35px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 11px;
+  border: 1px solid rgba(255,255,255,.85);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .5px;
+  text-shadow: 0 1px 3px rgba(0,0,0,.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,.16);
+}
+
+.rarity-badge-uc { background: linear-gradient(135deg, #edacd0, #b995cf); }
+.rarity-badge-r { background: linear-gradient(135deg, #8fa9c9, #667da8); }
+.rarity-badge-ur { background: linear-gradient(135deg, #a9d7d7, #9a83c8, #e8a8cf); }
+.rarity-badge-ssr { background: linear-gradient(135deg, #f4d68b, #b78b55, #805d9d); }
+.rarity-badge-c { background: linear-gradient(135deg, #c9c5d1, #918a9e); }
+
+.photocard-shine {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .22;
+  background: linear-gradient(118deg, transparent 28%, rgba(255,255,255,.65) 43%, transparent 58%);
+  mix-blend-mode: screen;
+}
+
+.rarity-uc { background: linear-gradient(145deg, #fff, #fcebf5); border-color: #e8b9d5; }
+.rarity-r { background: linear-gradient(145deg, #fff, #e8eef8); border-color: #a9bad7; }
+.rarity-ur { background: linear-gradient(135deg, #fefcff, #e5e0f5, #d5eeee, #f9e2ef); border: 2px solid #c7b5df; }
+.rarity-ur .photocard-shine { opacity: .5; }
+.rarity-ssr { background: linear-gradient(145deg, #fffdf5, #f5e7c8, #e7d9f1); border: 2px solid #c8a76c; box-shadow: 0 14px 34px rgba(150, 113, 55, .2), 0 0 0 2px rgba(235, 214, 164, .3); }
+.rarity-ssr .photocard-shine { opacity: .48; }
+
+.physical-card-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 10px 5px 5px;
+  color: #51475f;
+}
+
+.physical-group {
+  color: #a18dbd;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.4px;
+}
+
+.physical-card-caption strong { font-size: 17px; line-height: 1.2; }
+.physical-card-id { color: #aaa2b2; font-size: 8px; letter-spacing: 1px; }
+
+.photocard-compact {
+  width: 100%;
+  border-radius: 15px;
+  padding: 7px;
+  box-shadow: none;
+}
+
+.photocard-compact .physical-photo-wrap { border-radius: 9px; }
+.photocard-compact .physical-card-caption { padding: 8px 4px 3px; }
+.photocard-compact .physical-card-caption strong { font-size: 15px; }
+
+.reward-result .physical-photocard { margin: 0 auto; }
+.reward-rarity.rarity-text-uc, .collection-rarity.rarity-text-uc { background: #f8e5f0; color: #a45d88; }
+.reward-rarity.rarity-text-r, .collection-rarity.rarity-text-r { background: #e5edf8; color: #607da8; }
+.reward-rarity.rarity-text-ur, .collection-rarity.rarity-text-ur { background: #eee8f8; color: #8165a8; }
+.reward-rarity.rarity-text-ssr, .collection-rarity.rarity-text-ssr { background: #f6ebcf; color: #98713b; }
+
+.collection-card { padding: 9px; }
+.collection-card .collection-card-info { padding: 8px 5px 5px; }
+.collection-card .collection-card-bottom { margin-top: 9px; }
+
+@media (max-width: 700px) {
+  .physical-photocard { width: min(230px, 100%); }
+  .photocard-compact { width: 100%; }
+  .collection-grid { align-items: start; }
+}
